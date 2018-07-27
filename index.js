@@ -4,6 +4,7 @@ const {app, BrowserWindow, ipcMain, shell} = electron;
 const fs = require("fs");
 const imagemin = require('imagemin');
 const imageminPngquant = require('imagemin-pngquant');
+const imageminMozjpeg = require('imagemin-mozjpeg');
 
 global.mainWindow = null;
 
@@ -26,7 +27,7 @@ function createWindow() {
   if(global.mainWindow !== null ) {
     return;
   }
-  global.mainWindow = new BrowserWindow({width: 350, height: 550});
+  global.mainWindow = new BrowserWindow({width: 350, height: 600});
 
   global.mainWindow.loadURL('file://' + __dirname + '/index.html');
   global.mainWindow.webContents.session.clearCache(function() {});
@@ -52,8 +53,9 @@ ipcMain.on('ipc_open_output_dir', (event, arg) => {
 function optimize_image() {
   const input_dir = app.getPath('userData') + '/input/';
   const output_dir = app.getPath('userData') + '/output/';
-  imagemin([input_dir+ '*.png'], output_dir, {
+  imagemin([input_dir + '*.{jpg,jpeg,png}'], output_dir, {
     plugins: [
+      imageminMozjpeg(),
       imageminPngquant()
     ]
   });
