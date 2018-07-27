@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "imagemin": "^6.0.0",
-    "imagemin-pngquant": "^6.0.0"
+    "imagemin-pngquant": "^6.0.0",
+    "uikit": "^3.0.0-rc.10"
   }
 }
