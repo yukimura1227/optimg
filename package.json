@@ -38,7 +38,8 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^2.0.5",
-    "electron-builder": "^20.26.0"
+    "electron-builder": "^20.26.0",
+    "travis-encrypt": "^2.1.1"
   },
   "dependencies": {
     "imagemin": "^6.0.0",
