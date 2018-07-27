@@ -9,7 +9,6 @@ cache:
 node_js:
   - '9'
 script:
-  - yarn run test
   - yarn run pack
 branches:
   only:
