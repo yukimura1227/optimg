@@ -1,6 +1,6 @@
 os:
   - osx
-  - windows
+  #- windows
   - linux
 language: node_js
 cache:
