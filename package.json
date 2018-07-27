@@ -2,11 +2,43 @@
   "name": "optimg",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "pack": "build --mac --x64 && build --win --x64 && build --linux --x64",
+    "pack:osx": "build --mac --x64",
+    "pack:win": "build --win --x64",
+    "pack:linux": "build --linux --x64"
+  },
+  "build": {
+    "asar": false,
+    "appId": "com.electron.yukimura1227.optimg",
+    "mac": {
+      "target": [
+        "zip",
+        "dmg"
+      ]
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "deb",
+      "category": "Development"
+    },
+    "directories": {
+      "output": "distribution"
+    },
+    "files": [
+      "**/*",
+      "!docs/",
+      "!test/"
+    ]
+  },
   "repository": "git@github.com:yukimura1227/optimg.git",
   "author": "yukimura1227 <takamura1227@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^2.0.5"
+    "electron": "^2.0.5",
+    "electron-builder": "^20.26.0"
   },
   "dependencies": {
     "imagemin": "^6.0.0",

@@ -1,0 +1,16 @@
+os: osx
+language: node_js
+cache:
+  yarn: true
+  directories:
+    - node_modules
+    - $HOME/Library/Caches/electron
+    - $HOME/Library/Caches/electron-builder
+node_js:
+  - '9'
+script:
+  - yarn run test
+  - yarn run pack
+branches:
+  only:
+  - master
