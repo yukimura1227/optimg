@@ -1,6 +1,6 @@
 {
   "name": "optimg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "pack": "build --mac --x64 && build --win --x64 --ia32 && build --linux --x64",
