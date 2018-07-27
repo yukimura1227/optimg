@@ -11,6 +11,7 @@
   "build": {
     "asar": false,
     "appId": "com.electron.yukimura1227.optimg",
+    "artifactName": "${name}-${version}-${os}-${arch}.${ext}",
     "mac": {
       "target": [
         "zip",
