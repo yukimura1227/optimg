@@ -1,6 +1,5 @@
 platform:
   - x64
-  - x86
 
 # Test against the latest version of this Node.js version
 environment:
