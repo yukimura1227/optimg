@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "pack": "build --mac --x64 && build --win --x64 && build --linux --x64",
+    "pack": "build --mac --x64 && build --win --x64 --ia32 && build --linux --x64",
     "pack:osx": "build --mac --x64",
-    "pack:win": "build --win --x64",
+    "pack:win": "build --win --x64 --ia32",
     "pack:linux": "build --linux --x64"
   },
   "build": {
