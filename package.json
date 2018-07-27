@@ -7,5 +7,8 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^2.0.5"
+  },
+  "dependencies": {
+    "imagemin": "^6.0.0"
   }
 }
