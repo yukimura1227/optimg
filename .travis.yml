@@ -13,7 +13,7 @@ node_js:
   - '9'
 script:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]    ; then yarn run pack:osx  ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then yarn run pack:win  ; fi
+  #- if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then yarn run pack:win  ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]  ; then yarn run pack:linux; fi
 branches:
   only:
