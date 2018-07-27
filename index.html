@@ -5,6 +5,26 @@
   <title>caputure the paiza</title>
 </head>
 <body>
-  sample
+  <div>
+    <button id="js-open-input-dir">最適化する画像を配置する</button>
+  </div>
+  <div>
+    <button id="js-optimize-image">最適化する</button>
+  </div>
+  <div>
+    <button id="js-open-output-dir">最適化した画像を確認する</button>
+  </div>
+  <script>
+    const ipc = require('electron').ipcRenderer
+    document.getElementById('js-open-input-dir').addEventListener('click', (event) => {
+      ipc.send('ipc_open_input_dir');
+    });
+    document.getElementById('js-open-output-dir').addEventListener('click', (event) => {
+      ipc.send('ipc_open_output_dir');
+    });
+    document.getElementById('js-optimize-image').addEventListener('click', (event) => {
+      ipc.send('ipc_optimize_image');
+    });
+  </script>
 </body>
 </html>
