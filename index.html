@@ -2,17 +2,30 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>caputure the paiza</title>
+  <title>optimg</title>
+  <link rel="stylesheet" href="node_modules/uikit/dist/css/uikit.css" />
 </head>
 <body>
-  <div>
-    <button id="js-open-input-dir">最適化する画像を配置する</button>
-  </div>
-  <div>
-    <button id="js-optimize-image">最適化する</button>
-  </div>
-  <div>
-    <button id="js-open-output-dir">最適化した画像を確認する</button>
+  <div class="uk-container">
+    <div class="uk-margin uk-card uk-card-default uk-card-body">
+      <h3 class="uk-card-title">
+        1.準備
+      </h3>
+      <button id="js-open-input-dir" class="uk-button uk-button-primary uk-width-1-1">最適化する画像を配置する</button>
+    </div>
+    <div class="uk-margin uk-card uk-card-default uk-card-body">
+      <h3 class="uk-card-title">
+        2.実行
+      </h3>
+      <button id="js-optimize-image" class="uk-button uk-button-primary uk-width-1-1">最適化する</button>
+      ※ このversionはpngのみに対応
+    </div>
+    <div class="uk-margin uk-card uk-card-default uk-card-body">
+      <h3 class="uk-card-title">
+        3.確認
+      </h3>
+      <button id="js-open-output-dir" class="uk-button uk-button-primary uk-width-1-1">最適化した画像を確認する</button>
+    </div>
   </div>
   <script>
     const ipc = require('electron').ipcRenderer
@@ -26,5 +39,7 @@
       ipc.send('ipc_optimize_image');
     });
   </script>
+  <script src="node_modules/uikit/dist/js/uikit.js"></script>
+  <script src="node_modules/uikit/dist/js/uikit-icons.min.js"></script>
 </body>
 </html>
