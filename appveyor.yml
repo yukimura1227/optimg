@@ -21,7 +21,7 @@ install:
 test_script:
   - node --version
   - npm --version
-  - yanr --version
+  - yarn --version
 
 build_script:
   - yarn run pack:win
